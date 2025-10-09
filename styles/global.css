@@ -39,12 +39,15 @@ a:hover{
     color: var(--brand-color-light);
     text-decoration: underline;
 }
-
-.grid{
-    display: grid;
+img{
+    max-width: 100%;
 }
-
-.grid-flow-col{
-    grid-auto-flow: column;
+.container{
+    max-width: 1280px;
+    padding-inline: 32px;
+    margin-inline: auto;
+}
+main{
+    margin-top: 40px;
 }
  
