@@ -5,5 +5,17 @@
     object-fit: cover;
     border-radius: 4px;
   }
-
+  .card{
+    border-radius: 4px;
+    overflow: hidden; /*esconde o que ultrapassa a caixa, no caso a div com a classe .card*/
+    position: relative;
+    &::before{  /*insere conteúdo antes do conteúdo real, no caso a caixa branca*/
+      content: "";
+      position: absolute;
+      inset: 0; /*faz com que todos os lados tenham 0px de distancia das bordas, assim ocupando a área toda do containing block*/
+      top: 50%;
+      background: linear-gradient(to bottom, transparent 0%, #020617)
+      
+    }
+  }
 }
