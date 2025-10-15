@@ -17,7 +17,7 @@
     /* Fontes */
     --font-family: "Archivo", sans-serif;
     --text: normal 16px/140% var(--font-family);
-    --text-sm: normal 14px/160% (var(--font-family));
+    --text-sm: normal 14px/160% var(--font-family);
     --h1: 800 24px/135% var(--font-family);
     --h2: 800 16px/140% var(--font-family);
     --h3: 800 14px/140% var(--font-family);
@@ -51,8 +51,16 @@ img{
     margin-inline: auto;
 }
 main{
-    margin-top: 40px;
-    gap: 80px;
+    margin-block: 40px;
+    row-gap: 80px;
+    column-gap: 32px;
+
+    grid-template-columns: 2fr 1.35fr;
+
+    grid-template-areas:
+    "featured featured"
+    "weekly weekly"
+    "ai aside"
 }
 
 .content-tag{
